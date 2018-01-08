@@ -84,7 +84,7 @@
         <scene sceneID="1Iq-WH-Gqa">
             <objects>
                 <viewController id="a19-ik-Ceh" customClass="ChannelVC" customModule="Smack" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3Ju-vV-0gc">
+                    <view key="view" contentMode="scaleToFill" id="3Ju-vV-0gc" customClass="GradientView" customModule="Smack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
