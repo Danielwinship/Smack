@@ -10,6 +10,7 @@ import UIKit
 
 class ChannelVC: UIViewController {
     
+     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
     
     //Outlet
     @IBOutlet weak var loginButton:UIButton!
