@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07673928200508E600AC025B /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07673927200508E600AC025B /* CreateAccountVC.swift */; };
+		076AC26B20055E0E0031C382 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076AC26A20055E0E0031C382 /* AuthService.swift */; };
 		07A90B3E20028AA1006F73CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A90B3D20028AA1006F73CA /* AppDelegate.swift */; };
 		07A90B4320028AA1006F73CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07A90B4120028AA1006F73CA /* Main.storyboard */; };
 		07A90B4520028AA1006F73CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07A90B4420028AA1006F73CA /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		06AAEC92D299C26BDACFAC27 /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
 		07673927200508E600AC025B /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		076AC26A20055E0E0031C382 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		07A90B3A20028AA1006F73CA /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07A90B3D20028AA1006F73CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07A90B4220028AA1006F73CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		076AC26920055DF50031C382 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				076AC26A20055E0E0031C382 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		07A90B3120028AA1006F73CA = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +85,7 @@
 		07A90B3C20028AA1006F73CA /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				076AC26920055DF50031C382 /* Services */,
 				07B321162004D23F00889F65 /* Utilites */,
 				07A90B562002C79D006F73CA /* Model */,
 				07A90B572002C7A4006F73CA /* View */,
@@ -277,6 +288,7 @@
 				07A90B5B2002C7E6006F73CA /* ChannelVC.swift in Sources */,
 				07A90B592002C7D4006F73CA /* ChatVC.swift in Sources */,
 				07673928200508E600AC025B /* CreateAccountVC.swift in Sources */,
+				076AC26B20055E0E0031C382 /* AuthService.swift in Sources */,
 				07B3211A2004D61600889F65 /* LoginVC.swift in Sources */,
 				07FBF30A2003895100FD74B5 /* GradientView.swift in Sources */,
 				07A90B3E20028AA1006F73CA /* AppDelegate.swift in Sources */,
