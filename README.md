@@ -1,2 +1,2 @@
 # Smack
-This is a fully working clone of Slack. 
+This is a fully working Slack clone. 
