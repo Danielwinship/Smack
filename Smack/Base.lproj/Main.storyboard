@@ -229,6 +229,9 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountPressed:" destination="RoN-o8-MUH" eventType="touchUpInside" id="gig-Td-OYB"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="tTg-ZI-5RJ">
                                 <rect key="frame" x="62.5" y="110.5" width="250" height="136"/>
@@ -301,6 +304,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Hx-au-nqC">
                                 <rect key="frame" x="92" y="438" width="191" height="30"/>
                                 <state key="normal" title="Generate Background Color"/>
+                                <connections>
+                                    <action selector="pickBGColorPressed:" destination="RoN-o8-MUH" eventType="touchUpInside" id="i8D-iB-IDy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0q-3i-uTf">
                                 <rect key="frame" x="137" y="276" width="100" height="158"/>
@@ -310,6 +316,7 @@
                                 <state key="normal" title="Choose Avatar"/>
                                 <connections>
                                     <action selector="createAccountButtonPressed:" destination="aWp-Xq-EXe" eventType="touchUpInside" id="G97-di-2m7"/>
+                                    <action selector="pickedAvatarPressed:" destination="RoN-o8-MUH" eventType="touchUpInside" id="b3M-FP-Lvk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -331,6 +338,10 @@
                         <viewLayoutGuide key="safeArea" id="QUm-6F-ENc"/>
                     </view>
                     <connections>
+                        <outlet property="emailText" destination="jFW-QQ-7jt" id="ARu-ug-6Oo"/>
+                        <outlet property="passwordText" destination="iaJ-8j-1xy" id="Syh-fU-phs"/>
+                        <outlet property="userImage" destination="zr9-cH-aWV" id="Q9n-8y-YKJ"/>
+                        <outlet property="usernameText" destination="ZwR-me-4IQ" id="io4-nV-WWv"/>
                         <segue destination="bMM-2h-89g" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="Cg3-ds-s5D"/>
                     </connections>
                 </viewController>
