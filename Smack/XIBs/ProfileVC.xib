@@ -18,6 +18,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="Smack" customModuleProvider="target">
             <connections>
+                <outlet property="bgView" destination="Syb-p6-5mr" id="mnW-EU-Af4"/>
+                <outlet property="profileImage" destination="chE-jm-W6u" id="nNo-bh-OBt"/>
+                <outlet property="userEmail" destination="iMW-Aw-jIa" id="opR-8h-Djx"/>
+                <outlet property="userName" destination="4J2-b6-SJn" id="gR7-P9-HlA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -36,6 +40,9 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="km2-Uc-dTU">
                             <rect key="frame" x="313" y="8" width="28" height="28"/>
                             <state key="normal" image="closeButton"/>
+                            <connections>
+                                <action selector="closeModalPress:" destination="-1" eventType="touchUpInside" id="Tag-YA-cV3"/>
+                            </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="V9i-02-cYu">
                             <rect key="frame" x="108" y="56.5" width="133" height="207"/>
@@ -72,6 +79,9 @@
                             <state key="normal" title="Logout">
                                 <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="logoutPressed:" destination="-1" eventType="touchUpInside" id="s5h-Pe-GlO"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -86,7 +96,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="SHT-9Z-QdC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="92c-hp-8By"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Syb-p6-5mr" secondAttribute="bottom" id="P4u-Vl-IuD"/>
