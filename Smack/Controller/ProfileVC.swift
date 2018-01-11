@@ -28,9 +28,7 @@ class ProfileVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func closeModalPress(_ sender:Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
+   
  
     func setupView() {
        profileImage.image = UIImage(named: UserDataService.instance.avatarName)
@@ -38,6 +36,13 @@ class ProfileVC: UIViewController {
         userEmail.text = UserDataService.instance.email
         profileImage.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
         
+        let closeTouch = UITapGestureRecognizer(target: self, action: #selector(ProfileVC.closeTapped(_:)))
+        bgView.addGestureRecognizer(closeTouch)
+        
+    }
+    
+    @objc func closeTapped(_ recognizer:UITapGestureRecognizer) {
+        dismiss(animated: true, completion: nil)
     }
 
 }
