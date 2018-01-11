@@ -32,6 +32,7 @@ self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 6
     if AuthService.instance.isLoggedIn {
         loginButton.setTitle(UserDataService.instance.name, for: .normal)
         userImage.image = UIImage(named: UserDataService.instance.avatarName)
+        userImage.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
     } else {
         loginButton.setTitle("Login", for: .normal)
         userImage.image = UIImage(named: "menuProfileIcon")
