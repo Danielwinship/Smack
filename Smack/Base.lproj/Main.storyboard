@@ -493,6 +493,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGF-WC-eNQ">
                                 <rect key="frame" x="273" y="84" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addChannelButtonPressed:" destination="a19-ik-Ceh" eventType="touchUpInside" id="DHj-ec-yBf"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Lcm-a2-eo9" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="10" y="582" width="75" height="75"/>
