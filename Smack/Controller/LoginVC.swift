@@ -13,7 +13,6 @@ class LoginVC: UIViewController {
     //outlets
     
     @IBOutlet weak var usernameText: UITextField!
-    
     @IBOutlet weak var passwordText: UITextField!
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
@@ -21,7 +20,7 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         setupView()
 
-        // Do any additional setup after loading the view.
+        
     }
 
     @IBAction func loginPressed(_ sender: Any) {
