@@ -80,6 +80,7 @@
                         <viewLayoutGuide key="safeArea" id="qT0-Qj-F9D"/>
                     </view>
                     <connections>
+                        <outlet property="chatNameLabel" destination="aeJ-dg-voQ" id="8kk-az-aat"/>
                         <outlet property="menuButton" destination="SuJ-aN-ycc" id="YS8-2Y-5L1"/>
                     </connections>
                 </viewController>
