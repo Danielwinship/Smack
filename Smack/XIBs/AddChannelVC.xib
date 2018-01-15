@@ -20,7 +20,6 @@
             <connections>
                 <outlet property="bgView" destination="H8V-SG-6d1" id="h8z-Ib-285"/>
                 <outlet property="chanDesc" destination="VUn-hL-gAe" id="VX7-n0-P5h"/>
-                <outlet property="createChannelPressed" destination="bKP-pP-08B" id="Vpa-db-nzT"/>
                 <outlet property="nameText" destination="TIM-jw-uXE" id="1Dd-J7-EbD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -30,9 +29,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8V-SG-6d1" userLabel="bgView">
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8V-SG-6d1" userLabel="bgView">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mac-xG-GXU">
                     <rect key="frame" x="20" y="100" width="335" height="320"/>
@@ -91,6 +90,9 @@
                                     <real key="value" value="5"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="createChannelPressed:" destination="-1" eventType="touchUpInside" id="feD-wu-pce"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wht-hL-GGY">
                             <rect key="frame" x="299" y="8" width="28" height="28"/>
@@ -120,7 +122,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="H8V-SG-6d1" secondAttribute="trailing" id="3r4-zy-FiD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mac-xG-GXU" secondAttribute="trailing" constant="20" id="PaA-Zv-2lR"/>

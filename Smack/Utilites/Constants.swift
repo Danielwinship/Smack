@@ -19,6 +19,10 @@ let URL_USER_ADD = "\(BASE_URL)user/add"
 let URL_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
 let URL_GET_CHANNELS = "\(BASE_URL)channel/"
 
+//Socket
+let SOCKET_EVT_NEW_CHANNEL = "newChannel"
+let SOCKET_EVT_CHANNEL_CREATED = "channelCreated"
+
 //Colors
 let smackPurplePlaceHolder = #colorLiteral(red: 0.3254901961, green: 0.4196078431, blue: 0.7764705882, alpha: 0.5)
 
