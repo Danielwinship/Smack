@@ -33,6 +33,7 @@ class SocketService: NSObject {
     }
     
     func getChannel(completion: @escaping CompletionHandler) {
+        MessageService.instance.clearChannels()
         manager.defaultSocket.on(SOCKET_EVT_CHANNEL_CREATED) { (dataArray, ack) in
             guard let name = dataArray[0] as? String else { return }
             guard let description = dataArray[1] as? String else { return }

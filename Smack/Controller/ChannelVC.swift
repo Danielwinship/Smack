@@ -25,6 +25,7 @@ class ChannelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         SocketService.instance.getChannel { (success) in
             if success {
                 self.tableView.reloadData()
+                 print(MessageService.instance.channels)
             }
         }
 
@@ -72,6 +73,8 @@ class ChannelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
             loginButton.setTitle(UserDataService.instance.name, for: .normal)
             userImage.image = UIImage(named: UserDataService.instance.avatarName)
             userImage.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
+            
+            tableView.reloadData()
         } else {
             loginButton.setTitle("Login", for: .normal)
             userImage.image = UIImage(named: "menuProfileIcon")
