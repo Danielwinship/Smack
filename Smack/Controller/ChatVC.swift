@@ -11,6 +11,7 @@ import UIKit
 class ChatVC: UIViewController {
     
     //Oulets
+    @IBOutlet weak var messageTextBox: UITextField!
     @IBOutlet weak var menuButton:UIButton!
     @IBOutlet weak var chatNameLabel: UILabel!
     
@@ -34,6 +35,8 @@ class ChatVC: UIViewController {
     }
     
     
+    @IBAction func sendMessagePressed(_ sender: Any) {
+    }
     @objc func userDataDidChange(_ notif: Notification){
         if AuthService.instance.isLoggedIn {
          onLoginGetMessages()
@@ -72,8 +75,6 @@ class ChatVC: UIViewController {
         MessageService.instance.findAllMessagesForChannel(channelID: channelID) { (success) in
             
         }
-        
-        
     }
 
   
