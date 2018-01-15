@@ -11,11 +11,10 @@ import UIKit
 class LoginVC: UIViewController {
     
     //outlets
-    
     @IBOutlet weak var usernameText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
-    
     @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
