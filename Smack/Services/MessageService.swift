@@ -58,8 +58,7 @@ class MessageService {
             if response.result.error == nil {
                 self.clearMessages()
                 guard let data = response.data else { return }
-                self.getMessageData(data: data)
-                    print(self.messages)
+                self.getMessage(data: data)
                     completion(true)
                 } else {
                     debugPrint(response.result.error as Any)
@@ -69,7 +68,7 @@ class MessageService {
         }
 
 
-    func getMessageData(data: Data) {
+    func getMessage(data: Data) {
         do {
             if let json = try JSON(data: data).array {
                 for item in json {
