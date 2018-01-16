@@ -9,6 +9,9 @@
 import UIKit
 import SocketIO
 
+let manager = SocketManager(socketURL: URL(string: BASE_URL)!, config: [.log(true), .compress])
+let socket = manager.defaultSocket
+
 class SocketService: NSObject {
     
     static let instance = SocketService()
@@ -17,24 +20,23 @@ class SocketService: NSObject {
         super.init()
     }
     
-    let manager = SocketManager(socketURL: URL(string: BASE_URL)!, config: [.log(true), .compress])
-    
+
     func establishConnection() {
-        manager.defaultSocket.connect()
+       socket.connect()
     }
     
     func closeConnection() {
-        manager.defaultSocket.disconnect()
+        socket.disconnect()
     }
     
     func addChannel(name: String, description: String, completion: @escaping CompletionHandler) {
-        manager.defaultSocket.emit(SOCKET_EVT_NEW_CHANNEL, name, description)
+        socket.emit(SOCKET_EVT_NEW_CHANNEL, name, description)
         completion(true)
     }
     
     func getChannel(completion: @escaping CompletionHandler) {
         MessageService.instance.clearChannels()
-        manager.defaultSocket.on(SOCKET_EVT_CHANNEL_CREATED) { (dataArray, ack) in
+       socket.on(SOCKET_EVT_CHANNEL_CREATED) { (dataArray, ack) in
             guard let name = dataArray[0] as? String else { return }
             guard let description = dataArray[1] as? String else { return }
             guard let id = dataArray[2] as? String else { return }
@@ -44,9 +46,12 @@ class SocketService: NSObject {
         }
     }
     
+    
+  
+    
     func addMessage(messageBody:String, userId:String, channelId:String, completion: @escaping CompletionHandler) {
         let user = UserDataService.instance
-        manager.defaultSocket.emit("newMessage", messageBody,userId,channelId, user.name,user.avatarName,user.avatarColor)
+        socket.emit("newMessage", messageBody,userId,channelId, user.name,user.avatarName,user.avatarColor)
         completion(true)
     }
     

@@ -83,7 +83,7 @@
                                 <rect key="frame" x="337" y="632" width="30" height="30"/>
                                 <state key="normal" image="send"/>
                                 <connections>
-                                    <action selector="sendMessagePressed:" destination="954-DF-qf1" eventType="touchUpInside" id="sIx-fb-jXS"/>
+                                    <action selector="sendMsgPressed:" destination="954-DF-qf1" eventType="touchUpInside" id="ji0-aT-Vdd"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="haB-Pl-lG8">
@@ -581,7 +581,7 @@
                                 <rect key="frame" x="273" y="84" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                                 <connections>
-                                    <action selector="addChannelButtonPressed:" destination="a19-ik-Ceh" eventType="touchUpInside" id="DHj-ec-yBf"/>
+                                    <action selector="addChannelPressed:" destination="a19-ik-Ceh" eventType="touchUpInside" id="1be-SP-bVK"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Lcm-a2-eo9" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
@@ -628,7 +628,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButtonPressed:" destination="a19-ik-Ceh" eventType="touchUpInside" id="PHk-cg-6gQ"/>
+                                    <action selector="loginBtnPressed:" destination="a19-ik-Ceh" eventType="touchUpInside" id="1b7-Mm-b3D"/>
                                 </connections>
                             </button>
                         </subviews>
