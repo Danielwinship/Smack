@@ -9,17 +9,21 @@
 import UIKit
 import SocketIO
 
-let manager = SocketManager(socketURL: URL(string: BASE_URL)!, config: [.log(true), .compress])
-let socket = manager.defaultSocket
+ var manager = SocketManager(socketURL: URL(string: BASE_URL)!, config: [.log(true), .compress])
+
 
 class SocketService: NSObject {
     
     static let instance = SocketService()
     
+
+    
     override init() {
         super.init()
     }
     
+   
+    var socket = manager.defaultSocket
 
     func establishConnection() {
        socket.connect()
@@ -75,6 +79,31 @@ class SocketService: NSObject {
             }
         }
     }
+    
+    
+    
+    func getTypingUsers(_ completionHandler:@escaping (_ typingUser: [String:String]) -> Void ) {
+    
+        socket.on("userTypingUpdate") { (dataArray, ack) in
+            guard let typingUsers = dataArray[0] as? [String:String] else {return}
+            completionHandler(typingUsers)
+        }
+    }
+    
+    func startTyping() {
+              guard let channelId = MessageService.instance.selectedChannel?.id else {return}
+    SocketService.instance.socket.emit("startType:", UserDataService.instance.name, channelId)
+    }
+    
+    func stopTyping() {
+          guard let channelId = MessageService.instance.selectedChannel?.id else {return}
+        SocketService.instance.socket.emit("stopType", UserDataService.instance.name, channelId)
+    }
+    
+    
+    
+    
+    
     
     
     

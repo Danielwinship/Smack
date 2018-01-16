@@ -89,6 +89,11 @@
                                     <action selector="sendMsgPressed:" destination="954-DF-qf1" eventType="touchUpInside" id="ji0-aT-Vdd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUA-MM-t4s">
+                                <rect key="frame" x="8" y="604" width="25.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="haB-Pl-lG8">
                                 <rect key="frame" x="0.0" y="77" width="375" height="520"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -153,7 +158,9 @@
                         <constraints>
                             <constraint firstItem="Avn-DT-OFc" firstAttribute="top" secondItem="haB-Pl-lG8" secondAttribute="bottom" constant="30" id="6Xd-BV-7pt"/>
                             <constraint firstItem="haB-Pl-lG8" firstAttribute="top" secondItem="hx3-NY-WLf" secondAttribute="bottom" id="83A-UN-qHr"/>
+                            <constraint firstItem="CUA-MM-t4s" firstAttribute="leading" secondItem="qT0-Qj-F9D" secondAttribute="leading" constant="8" id="AHR-cq-nzt"/>
                             <constraint firstItem="Avn-DT-OFc" firstAttribute="bottom" secondItem="qT0-Qj-F9D" secondAttribute="bottom" id="Jo3-2e-JpR"/>
+                            <constraint firstItem="Avn-DT-OFc" firstAttribute="top" secondItem="CUA-MM-t4s" secondAttribute="bottom" constant="6" id="PEN-qC-YfZ"/>
                             <constraint firstAttribute="trailing" secondItem="Bfd-5c-bQV" secondAttribute="trailing" constant="8" id="QtI-yl-U5T"/>
                             <constraint firstItem="hx3-NY-WLf" firstAttribute="leading" secondItem="qT0-Qj-F9D" secondAttribute="leading" id="VIn-4W-nWX"/>
                             <constraint firstItem="qT0-Qj-F9D" firstAttribute="trailing" secondItem="hx3-NY-WLf" secondAttribute="trailing" id="asX-gb-fFE"/>
@@ -172,6 +179,7 @@
                         <outlet property="messageTextBox" destination="Avn-DT-OFc" id="nK7-BC-Xze"/>
                         <outlet property="sendButton" destination="Bfd-5c-bQV" id="aiU-Le-bvf"/>
                         <outlet property="tableView" destination="haB-Pl-lG8" id="IYV-R9-Oob"/>
+                        <outlet property="typingUserLabel" destination="CUA-MM-t4s" id="Le6-t3-Wu7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82Y-E3-Voe" userLabel="First Responder" sceneMemberID="firstResponder"/>
