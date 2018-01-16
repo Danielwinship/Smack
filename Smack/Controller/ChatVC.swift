@@ -94,8 +94,9 @@ class ChatVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     func getMessages() {
         guard let channelID = MessageService.instance.selectedChannel?.id else {return}
-        MessageService.instance.findAllMessagesForChannel(channelID: channelID) { (success) in
+        MessageService.instance.findAllMessagesForChannel(channelId: channelID) { (success) in
             if success {
+                print(MessageService.instance.messages)
                 self.tableView.reloadData()
             }
         }
