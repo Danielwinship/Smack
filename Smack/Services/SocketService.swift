@@ -10,7 +10,7 @@ import UIKit
 import SocketIO
 
  var manager = SocketManager(socketURL: URL(string: BASE_URL)!, config: [.log(true), .compress])
-
+var socket = manager.defaultSocket
 
 class SocketService: NSObject {
     
@@ -23,7 +23,7 @@ class SocketService: NSObject {
     }
     
    
-    var socket = manager.defaultSocket
+    
 
     func establishConnection() {
        socket.connect()
@@ -82,22 +82,26 @@ class SocketService: NSObject {
     
     
     
-    func getTypingUsers(_ completionHandler:@escaping (_ typingUser: [String:String]) -> Void ) {
     
+    func getTypingUsers(_ completionHandler: @escaping (_ typingUsers: [String: String]) -> Void) {
+        
         socket.on("userTypingUpdate") { (dataArray, ack) in
-            guard let typingUsers = dataArray[0] as? [String:String] else {return}
+            guard let typingUsers = dataArray[0] as? [String: String] else { return }
             completionHandler(typingUsers)
         }
+        
     }
+    
+
     
     func startTyping() {
               guard let channelId = MessageService.instance.selectedChannel?.id else {return}
-    SocketService.instance.socket.emit("startType:", UserDataService.instance.name, channelId)
+    socket.emit("startType", UserDataService.instance.name, channelId)
     }
     
     func stopTyping() {
           guard let channelId = MessageService.instance.selectedChannel?.id else {return}
-        SocketService.instance.socket.emit("stopType", UserDataService.instance.name, channelId)
+        socket.emit("stopType", UserDataService.instance.name, channelId)
     }
     
     
