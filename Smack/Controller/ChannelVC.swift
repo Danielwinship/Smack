@@ -30,6 +30,14 @@ class ChannelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
                 self.tableView.reloadData()
             }
         }
+        
+        SocketService.instance.getChatMessage { (newMessage) in
+            if newMessage.channelID != MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn {
+            MessageService.instance.unreadChannels.append(newMessage.channelID)
+                self.tableView.reloadData()
+            }
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
