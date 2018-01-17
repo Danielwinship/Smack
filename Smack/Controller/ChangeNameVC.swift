@@ -40,7 +40,11 @@ class ChangeNameVC: UIViewController {
         guard let newUserName = changeNameTextField.text else {return}
         AuthService.instance.updateUserName(newUserName: newUserName) { (success) in
             if success {
+                NotificationCenter.default.post(name:NOTIF_USER_DATA_DID_CHANGE, object: nil)
                 self.dismiss(animated: true, completion: nil)
+                
+            } else {
+                return
             }
         }
         

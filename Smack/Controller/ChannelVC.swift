@@ -41,6 +41,7 @@ class ChannelVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         setupUserInfo()
     }
     

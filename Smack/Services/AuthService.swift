@@ -144,7 +144,10 @@ class AuthService {
         
         Alamofire.request("\(BASE_URL)/user/\(UserDataService.instance.id)", method: .put, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             if response.result.error == nil {
-                completion(true)
+                self.findUserByEmail(completion: { (success) in
+                     completion(true)
+                })
+               
             } else{
                 completion(false)
                 debugPrint(response.result.error as Any)
