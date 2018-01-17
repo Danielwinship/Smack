@@ -133,11 +133,24 @@ class AuthService {
     func updateUserName(newUserName: String, completion: @escaping CompletionHandler) {
         
         
+        
         let body: [String:Any] = [
-            "name": newUserName
+            "avatarColor": UserDataService.instance.avatarColor,
+            "avatarName": UserDataService.instance.avatarName,
+            "email": UserDataService.instance.email,
+            "name": newUserName,
+            "_id": UserDataService.instance.id
         ]
         
-        Alamofire.request("\(BASE_URL)\(UserDataService.instance.id)", method: .put, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER)
+        Alamofire.request("\(BASE_URL)/user/\(UserDataService.instance.id)", method: .put, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
+            if response.result.error == nil {
+                completion(true)
+            } else{
+                completion(false)
+                debugPrint(response.result.error as Any)
+            }
+        
+        }
         
     }
     
