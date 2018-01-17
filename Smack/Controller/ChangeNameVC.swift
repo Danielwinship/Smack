@@ -9,16 +9,30 @@
 import UIKit
 
 class ChangeNameVC: UIViewController {
-
+    
+    //Outlets
+    @IBOutlet weak var bgView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
 
-        // Do any additional setup after loading the view.
     }
 
     
     @IBAction func closeButtonPressed(_ sender: Any) {
           dismiss(animated: true, completion: nil)
+    }
+    
+    
+    func setupView() {
+        let closeTouch = UITapGestureRecognizer(target: self, action: #selector(ProfileVC.closeTapped(_:)))
+        bgView.addGestureRecognizer(closeTouch)
+        
+    }
+    
+    @objc func closeTapped(_ recognizer:UITapGestureRecognizer) {
+        dismiss(animated: true, completion: nil)
     }
     
 
