@@ -130,6 +130,20 @@ class AuthService {
     }
     
     
+    func updateUserName(newUserName: String, completion: @escaping CompletionHandler) {
+        
+        
+        let body: [String:Any] = [
+            "name": newUserName
+        ]
+        
+        Alamofire.request("\(BASE_URL)\(UserDataService.instance.id)", method: .put, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER)
+        
+    }
+    
+    
+    
+    
     func findUserByEmail(completion: @escaping CompletionHandler){
         Alamofire.request("\(URL_USER_BY_EMAIL)\(userEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             

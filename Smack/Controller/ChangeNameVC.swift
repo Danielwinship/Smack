@@ -37,6 +37,12 @@ class ChangeNameVC: UIViewController {
     }
     
     @IBAction func submitButtonPressed(_ sender: Any) {
+        guard let newUserName = changeNameTextField.text else {return}
+        AuthService.instance.updateUserName(newUserName: newUserName) { (success) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
         
     }
     
