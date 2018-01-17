@@ -32,7 +32,16 @@ class ProfileVC: UIViewController {
     }
 
    
- 
+    @IBAction func changeNameButtonPressed(_ sender: Any) {
+        if AuthService.instance.isLoggedIn {
+            let profile = ChangeNameVC()
+            profile.modalPresentationStyle = .custom
+            present(profile, animated: true, completion: nil)
+        } else {
+            return
+        }
+    }
+    
     func setupView() {
        profileImage.image = UIImage(named: UserDataService.instance.avatarName)
         userName.text = UserDataService.instance.name

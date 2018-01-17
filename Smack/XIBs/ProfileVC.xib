@@ -74,25 +74,39 @@
                                 </label>
                             </subviews>
                         </stackView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zpk-i8-0RU">
-                            <rect key="frame" x="143.5" y="322" width="48" height="30"/>
-                            <state key="normal" title="Logout">
-                                <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="logoutPressed:" destination="-1" eventType="touchUpInside" id="s5h-Pe-GlO"/>
-                            </connections>
-                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="LVO-Qd-jSE">
+                            <rect key="frame" x="19" y="315" width="296" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxk-eo-eZa">
+                                    <rect key="frame" x="0.0" y="0.0" width="98" height="30"/>
+                                    <state key="normal" title="Change Name">
+                                        <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="changeNameButtonPressed:" destination="-1" eventType="touchUpInside" id="LQo-zi-rFz"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zpk-i8-0RU">
+                                    <rect key="frame" x="198" y="0.0" width="98" height="30"/>
+                                    <state key="normal" title="Logout">
+                                        <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="logoutPressed:" destination="-1" eventType="touchUpInside" id="s5h-Pe-GlO"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="LVO-Qd-jSE" secondAttribute="bottom" constant="15" id="0M1-l9-IlN"/>
                         <constraint firstAttribute="height" constant="360" id="C2W-4A-DN6"/>
                         <constraint firstItem="V9i-02-cYu" firstAttribute="centerY" secondItem="SHT-9Z-QdC" secondAttribute="centerY" constant="-20" id="FOs-9I-i8W"/>
+                        <constraint firstItem="LVO-Qd-jSE" firstAttribute="centerX" secondItem="SHT-9Z-QdC" secondAttribute="centerX" id="HbV-n5-Rpp"/>
                         <constraint firstItem="km2-Uc-dTU" firstAttribute="top" secondItem="SHT-9Z-QdC" secondAttribute="top" constant="8" id="P3r-ls-MC2"/>
                         <constraint firstItem="V9i-02-cYu" firstAttribute="centerX" secondItem="SHT-9Z-QdC" secondAttribute="centerX" id="RPw-uL-7ke"/>
                         <constraint firstAttribute="trailing" secondItem="km2-Uc-dTU" secondAttribute="trailing" constant="8" id="hNM-A9-UA2"/>
-                        <constraint firstItem="Zpk-i8-0RU" firstAttribute="centerX" secondItem="SHT-9Z-QdC" secondAttribute="centerX" id="lxc-q3-ggA"/>
-                        <constraint firstAttribute="bottom" secondItem="Zpk-i8-0RU" secondAttribute="bottom" constant="8" id="yWh-yG-ibT"/>
                     </constraints>
                 </view>
             </subviews>

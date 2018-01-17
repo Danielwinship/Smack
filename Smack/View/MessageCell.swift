@@ -33,6 +33,7 @@ class MessageCell: UITableViewCell {
         let end = isoDate.index(isoDate.endIndex, offsetBy: -5)
         isoDate = isoDate.substring(to: end)
         
+        
         let isoFormatter = ISO8601DateFormatter()
         let chatDate = isoFormatter.date(from: isoDate.appending("Z"))
         
