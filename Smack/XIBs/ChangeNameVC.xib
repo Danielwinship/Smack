@@ -18,6 +18,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeNameVC" customModule="Smack" customModuleProvider="target">
             <connections>
                 <outlet property="bgView" destination="ltQ-H7-8hW" id="AKx-bl-P0e"/>
+                <outlet property="changeNameTextField" destination="AUS-T3-lSh" id="snC-Jt-qWQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -53,6 +54,9 @@
                                     <state key="normal" title="Submit">
                                         <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="submitButtonPressed:" destination="-1" eventType="touchUpInside" id="C7y-vi-JqW"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

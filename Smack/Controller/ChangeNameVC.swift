@@ -12,6 +12,7 @@ class ChangeNameVC: UIViewController {
     
     //Outlets
     @IBOutlet weak var bgView: UIView!
+    @IBOutlet weak var changeNameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,10 @@ class ChangeNameVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-
+    @IBAction func submitButtonPressed(_ sender: Any) {
+        
+    }
+    
     
 
 }
