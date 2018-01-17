@@ -43,6 +43,7 @@ class ChangeNameVC: UIViewController {
                 NotificationCenter.default.post(name:NOTIF_USER_DATA_DID_CHANGE, object: nil)
                 self.dismiss(animated: true, completion: nil)
                 
+                
             } else {
                 return
             }
